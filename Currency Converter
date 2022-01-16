@@ -1,0 +1,89 @@
+#include<iostream>
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    string a, b;
+    int x;
+    cout<<"I want to convert (INR, Dollar, Yen, Pound): ";
+    cin>>a;
+    cout<<"to (INR, Dollar, Yen, Pound) ";
+    cin>>b;
+    transform(a.begin(), a.end(), a.begin(), ::tolower);
+    transform(b.begin(), b.end(), b.begin(), ::tolower);
+    if(a=="inr" && b=="dollar"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"₹"<<x<<" to Dollar is $"<<(x*0.013);
+    }
+    
+    else if(a=="inr" && b=="yen"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"₹"<<x<<" to Yen is ¥"<<(x*1.54);
+    }
+    
+    else if(a=="inr" && b=="pound"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"₹"<<" to Pound is £"<<(x*0.0098);
+    }
+    
+    else if(a=="dollar" && b=="inr"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"$"<<x<<" to INR is ₹"<<(x*74.39);
+    }
+    
+    else if(a=="dollar" && b=="yen"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"$"<<x<<" to Yen is ¥"<<(x*114.24);
+    }
+    
+    else if(a=="dollar" && b=="pound"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"$"<<x<<" to Pound is £"<<(x*0.73);
+    }
+    
+    else if(a=="yen" && b=="inr"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"¥"<<x<<" to INR is ₹"<<(x*0.65);
+    }
+    
+    else if(a=="yen" && b=="dollar"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"¥"<<x<<" to Dollar is $"<<(x*0.0088);
+    }
+    
+    else if(a=="yen" && b=="pound"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"¥"<<x<<" to Pound is £"<<(x*0.0064);
+    }
+    
+    else if(a=="pound" && b=="inr"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"£"<<x<<" to INR is ₹"<<(x*101.73);
+    }
+    
+    else if(a=="pound" && b=="yen"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"£"<<x<<" to Yen is ¥"<<(x*156.22);
+    }
+    
+    else if(a=="pound" && b=="dollar"){
+        cout<<"Enter the Amount: ";
+        cin>>x;
+        cout<<"£"<<x<<" to Dollar is $"<<(x*1.37);
+    }
+    
+    else{
+        cout<<"Please give a valid input!";
+    }
+}
